@@ -1,0 +1,45 @@
+From aba944890dd061def914a06da392a236b19e7d66 Mon Sep 17 00:00:00 2001
+From: Akanksha Ubale <akankshaubale18@gmail.com>
+Date: Fri, 7 May 2021 14:49:50 +0530
+Subject: [PATCH] patch
+
+---
+ Makefile |  1 +
+ test.c   | 13 +++++++++++++
+ 2 files changed, 14 insertions(+)
+ create mode 100644 test.c
+
+diff --git a/Makefile b/Makefile
+index 09d790c..a8df47e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -181,6 +181,7 @@ UPROGS=\
+ 	_usertests\
+ 	_wc\
+ 	_zombie\
++	_test\
+ 
+ fs.img: mkfs README $(UPROGS)
+ 	./mkfs fs.img README $(UPROGS)
+diff --git a/test.c b/test.c
+new file mode 100644
+index 0000000..7fa00f3
+--- /dev/null
++++ b/test.c
+@@ -0,0 +1,13 @@
++#include "types.h"
++#include "stat.h"
++#include "user.h"
++#include "fs.h"
++
++
++int
++main(int argc, char *argv[])
++{
++//  hello();
++  printf(1,"lets patch\n");
++  exit();
++}
+-- 
+2.25.1
+
